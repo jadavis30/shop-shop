@@ -11,8 +11,8 @@ import "./style.css";
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
-const Cart = () => {
-  const [state, dispatch] = useStoreContext();
+export function Cart() {
+  const  = useSelector((state) => state.x.x);
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
   useEffect(() => {

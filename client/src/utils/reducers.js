@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { createSlice } from '@reduxjs/toolkit'
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
@@ -10,6 +10,23 @@ import {
   CLEAR_CART,
   TOGGLE_CART
 } from "./actions";
+
+export const cartSlice = createSlice({
+  name: 'cart',
+  initialState: {
+      cart: []
+  },
+  reducers: {
+      addToCart: (state) => {
+          state.cart.push()
+      },
+      addMultipleToCart: (state) => {
+         state.cart.push() 
+      }
+  }
+})
+
+export const 
 
 export const reducer = (state, action) => {
   switch (action.type) {
