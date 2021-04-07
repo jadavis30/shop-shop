@@ -1,4 +1,3 @@
-import { createSlice } from '@reduxjs/toolkit'
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
@@ -11,24 +10,15 @@ import {
   TOGGLE_CART
 } from "./actions";
 
-export const cartSlice = createSlice({
-  name: 'cart',
-  initialState: {
-      cart: []
-  },
-  reducers: {
-      addToCart: (state) => {
-          state.cart.push()
-      },
-      addMultipleToCart: (state) => {
-         state.cart.push() 
-      }
-  }
-})
+const initialState = {
+  products: [],
+  cart: [],
+  cartOpen: false,
+  categories:[],
+  currentCategory: "",
+}
 
-export const 
-
-export const reducer = (state, action) => {
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
       return {
@@ -101,7 +91,3 @@ export const reducer = (state, action) => {
       return state;
   }
 };
-
-export function useProductReducer(initialState) {
-  return useReducer(reducer, initialState)
-}
