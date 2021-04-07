@@ -8,8 +8,6 @@ import { createStore } from 'redux'
 import rootReducer from './reducers'
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(rootReducer)
-
 render(
   <Provider store={store}>
     <App />
