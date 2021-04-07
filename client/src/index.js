@@ -4,8 +4,6 @@ import App from './App';
 import store from './utils/store'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import rootReducer from './reducers'
 import * as serviceWorker from './serviceWorker';
 
 render(
